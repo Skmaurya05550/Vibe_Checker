@@ -1,1 +1,79 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Checker</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        #vibeButton {
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        #vibeButton:hover {
+            background-color: #45a049;
+        }
+
+        #vibeResult {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vibe Checker</h1>
+    <p>Click the button below to check your vibe!</p>
+    <button id="vibeButton" onclick="checkVibe()">Check My Vibe</button>
+    <div id="vibeResult"></div>
+
+    <script>
+        function checkVibe() {
+            const vibes = [
+                "You're radiating positive energy! Keep it up!",
+                "Feeling a bit neutral today, take some time to recharge!",
+                "Uh-oh! Looks like it's time for a self-care break!",
+                "You're on fire! The world can't keep up with your vibes!",
+                "Calm and collected – you're the epitome of zen right now.",
+                "Mysterious and intriguing, your vibe has everyone guessing!"
+            ];
+
+            const randomVibe = vibes[Math.floor(Math.random() * vibes.length)];
+            document.getElementById('vibeResult').innerText = randomVibe;
+        }
+    </script>
+</body>
+
+</html>
+
